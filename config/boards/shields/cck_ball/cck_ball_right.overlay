@@ -116,7 +116,7 @@
         input-processors = <&zip_xy_swap_mapper>;
         scroller {
             layers = <1>;
-            input-processors = <&zip_xy_to_scroll_mapper>,<&zip_xy_scaler 2 3>;
+            input-processors = <&zip_xy_swap_mapper>,<&zip_xy_to_scroll_mapper>,<&zip_xy_scaler 1 2>;
         };
     };
 };
