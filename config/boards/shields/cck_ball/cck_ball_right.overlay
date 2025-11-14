@@ -5,6 +5,7 @@
  */
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include "cck_ball.dtsi"
 
@@ -123,6 +124,10 @@
             layers = <1>;
             input-processors = <&zip_xy_scaler 1 4>,<&zip_xy_to_scroll_mapper>,<&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
+        sniper {
+            layers = <4>;
+            input-processors = <&zip_xy_scaler 1 5>;
+        }
     };
 };
 
