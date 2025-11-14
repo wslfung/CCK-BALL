@@ -58,6 +58,7 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <800>;
+        swap-xy;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -113,10 +114,9 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&zip_xy_swap_mapper>;
         scroller {
             layers = <1>;
-            input-processors = <&zip_xy_swap_mapper>,<&zip_xy_to_scroll_mapper>,<&zip_xy_scaler 1 2>;
+            input-processors = <&zip_xy_to_scroll_mapper>,<&zip_xy_scaler 1 2>;
         };
     };
 };
