@@ -116,7 +116,7 @@
         device = <&trackball>;
         scroller {
             layers = <1>;
-            input-processors = <&zip_xy_to_scroll_mapper>,<&zip_xy_scaler 1 2>;
+            input-processors = <&zip_xy_scaler 1 4>,<&zip_xy_to_scroll_mapper>;
         };
     };
 };
